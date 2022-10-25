@@ -21,9 +21,13 @@
       <button v-on:click="add(10)">Add 10</button>
       <button v-on:click="reduce(5)">Subtract 5</button>
       <p>Result: {{ counter }}</p>
-      <input type="text" v-on:input="setName($event, 'Schwarzmüller')">
+      <input type="text" v-on:input="setName($event, 'Wannabe')">
       <button>Reset Input</button>
-      <p>Your Name: {{ name }}</p>
+      <!-- All methods will be re-executed when whatever changes on DOM. outputFullname()
+      will be executed every time. This reactivity is very good, but might make things
+      sloggish. For such reason methods are not a good solution for dynamically calculated
+      fields -->
+      <p>Your Name: {{ outputFullname() }}</p>
     </section>
   </body>
 </html>
