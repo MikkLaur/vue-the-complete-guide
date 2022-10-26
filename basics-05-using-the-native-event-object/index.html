@@ -18,12 +18,12 @@
     </header>
     <section id="events">
       <h2>Events in Action</h2>
-      <button v-on:click="add(10)">Add 10</button>
-      <button v-on:click="reduce(5)">Subtract 5</button>
+      <button @click="add(10)">Add 10</button>
+      <button @click="reduce(5)">Subtract 5</button>
       <p>Result: {{ counter }}</p>
-      <input type="text" v-model="name">
+      <input type="text" :value="example" v-model="name">
       <input type="text" v-model="lastName">
-      <button v-on:click="resetInput">Reset Input</button>
+      <button @click="resetInput">Reset Input</button>
       <!-- All methods will be re-executed when whatever changes on DOM. outputFullname()
       will be executed every time. This reactivity is very good, but might make things
       sloggish. For such reason methods are not a good solution for dynamically calculated
