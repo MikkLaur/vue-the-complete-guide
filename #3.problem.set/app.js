@@ -8,12 +8,12 @@ const app = Vue.createApp({
     },
     watch: {
         counter(value) {
-            if(!timedOut) {
+            if(!this.timedOut) {
                 this.timedOut = true;
                 const that = this;
                 setTimeout(function() {
-                    that.counter = 0;
                     that.timedOut = false;
+                    that.counter = 0;
                 }, 5000);
             }
 

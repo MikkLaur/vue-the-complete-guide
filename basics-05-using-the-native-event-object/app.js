@@ -9,7 +9,7 @@ const app = Vue.createApp({
   },
   // similar to computed properties
   watch: {
-    // Watcher could watcvh a counter for example and when it exceeds 50, it will be reset.
+    // Watcher could keep track of a counter for example and when it exceeds 50, it will be reset.
     counter(value) {
       if (value > 50) {
         const that = this;
